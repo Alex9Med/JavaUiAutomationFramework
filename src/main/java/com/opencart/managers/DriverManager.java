@@ -18,6 +18,7 @@ public class DriverManager {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("ignore-certificate-errors");
                 options.addArguments("--start-maximized");
+                options.addArguments("--incognito");
                 driver = new ChromeDriver(options);
                 System.out.println("The Chrome Driver is initiated");
                 break;
