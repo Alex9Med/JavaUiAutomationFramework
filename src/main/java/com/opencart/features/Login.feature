@@ -6,8 +6,9 @@ Feature: Login Related Test Cases
     When the login form is populated with following details:
       | <email>    |
       | <password> |
+    And the "loginBtn" from "LoginPage" is clicked
     Then the following list of error messages is displayed:
-      |  Warning: No match for E-Mail Address and/or Password. |
+      | Warning: No match for E-Mail Address and/or Password. |
     Examples:
       | email                 | password       | affectedAttribute |
       | medoniialex@gmail.com | The password!1 | password          |
