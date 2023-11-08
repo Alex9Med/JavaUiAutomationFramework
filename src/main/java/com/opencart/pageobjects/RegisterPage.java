@@ -1,5 +1,6 @@
 package com.opencart.pageobjects;
 
+import com.opencart.managers.ScrollManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,9 +32,8 @@ public class RegisterPage extends Page {
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
         if(toggle){
+            ScrollManager.scrollToTheElement(privacyToggle);
             privacyToggle.click();
         }
-        continueBtn.click();
     }
-
 }
